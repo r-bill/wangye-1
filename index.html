@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex 布局</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+
+      .yinYin {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .baiSe {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .daoHang {
+        padding: 10px 20px;
+        border-bottom: 1px solid grey;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边框 -->
+    <div style="width: 200px; z-index: 2" class="baiSe yinYin">
+      <!-- 头像栏 -->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid #999;
+        "
+        class="flex"
+      >
+        <img
+          src="./touxiang.png"
+          width="40px"
+          height="40px"
+          alt=""
+        />
+        <div style="margin-left: 10px">流水线水帘柜13679528453小罗</div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <div class="daoHang"><a href="index.html">前往网页1</a></div>
+        <div class="daoHang"><a href="index.html">前往网页2</a></div>
+        <div class="daoHang"><a href="index.html">前往网页3</a></div>
+        <div class="daoHang"><a href="index.html">前往网页4</a></div>
+        <div class="daoHang"><a href="index.html">前往网页5</a></div>
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex1 flex column">
+      <!-- 头部栏 -->
+      <div style="height: 60px; z-index: 1" class="baiSe yinYin"></div>
+      <!-- 内容区 -->
+      <div style="overflow: auto" class="flex1 flex">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex">
+            <!-- 数据块 -->
+            <div style="height: 100px" class="flex1 baiSe mgr8 yinYin"></div>
+            <div style="height: 100px" class="flex1 baiSe mgr8 yinYin"></div>
+            <div style="height: 100px" class="flex1 baiSe mgr8 yinYin"></div>
+            <div style="height: 100px" class="flex1 baiSe yinYin"></div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column">
+            <!-- 列表项 -->
+            <div
+              style="height: 160px; align-items: row; justify-content: row"
+              class="baiSe mgt8 yinYin flex"
+            >
+              <img src="./1.png" width="25%px" height="100%px" />
+              <div style="margin-left: 10px" highly="]50px">
+                <div><h3>外形尺寸:飞机式流水线、长台式流水线</h3></div>
+                <div>
+                  <p>
+                    形状:中间输送皮带双边独立工作台、中间输送皮带双边长条工作台
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    工位分配:每1.2米为一个单元节、每2米为一个单元节、每单元节为2个工位、每单元节为4个工位
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              style="height: 160px; align-items: row; justify-content: row"
+              class="baiSe mgt8 yinYin flex"
+            >
+              <img src="./2.png" width="25%px" height="100%px" />
+              <div style="margin-left: 10px">
+                <div>
+                  <h3>电机:台拓调速电机1-12米200瓦13-30米400瓦30米以上750瓦</h3>
+                </div>
+                <div><h4>运转速度:每分钟1-6米可调</h4></div>
+                <div><p>运转转向:L-R或R-L</p></div>
+              </div>
+            </div>
+            <div
+              style="height: 160px; align-items: row; justify-content: row"
+              class="baiSe mgt8 yinYin flex"
+            >
+              <img src="./3.png" width="25%px" height="100%px" />
+              <div style="margin-left: 10px">
+                <div><h3>滚轮:采用400无缝钢管,表面滚花</h3></div>
+                <div><h3>托轮:采用38镀锌管制作</h3></div>
+                <div>
+                  <h3>照明部分:采用LEDT8单支灯管,每个灯管带独立开光</h3>
+                </div>
+              </div>
+            </div>
+            <div
+              style="height: 160px; align-items: row; justify-content: row"
+              class="baiSe mgt8 yinYin flex"
+            >
+              <img src="./4.png" width="25%px" height="100%px" />
+              <div style="margin-left: 10px">
+                <div>
+                  <h4>
+                    机架:主材料40*40*1.2优质钢管制作,拉伸60*40*1.3表面磷化高温烤漆
+                  </h4>
+                </div>
+                <div>
+                  <h4>S面:采用18MM厚刨花板+20防静电胶皮,白色胶条包边</h4>
+                </div>
+              </div>
+            </div>
+            <div
+              style="height: 160px; align-items: row; justify-content: row"
+              class="baiSe mgt8 yinYin flex"
+            >
+              <img src="./5.png" width="25%px" height="100%px" />
+              <div style="margin-left: 10px">
+                <div>
+                  <h4>
+                    仪表台:采用18MM创花板,白色胶条包边
+                  </h4>
+                </div>
+                <div>
+                  <h4>
+                    脚杯:可调节高度</h4>
+                </div>
+              </div>
+            </div>
+            <div
+              style="height: 160px; align-items: row; justify-content: row"
+              class="baiSe mgt8 yinYin flex"
+            >
+              <img src="./6.png" width="25%px" height="100%px" />
+              <div style="margin-left: 10px">
+                <div>
+                  <h4>
+                    插排:长条三位九孔，每米左右各安装一个
+                  </h4>
+                </div>
+                <div>
+                  <h4>
+                    工艺看板采用专用铝型材跑道,每个工位配一张A4透明胶套</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="flex column mgr8 mgt8">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="baiSe yinYin"></div>
+          <!-- 消息区 -->
+          <div style="height: 150px" class="baiSe mgt8 yinYin"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
